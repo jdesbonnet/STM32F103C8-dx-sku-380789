@@ -15,9 +15,9 @@ https://github.com/mkschreder/stm32f103c8t6_blink
 
 ## Board hardware
 
-The board comes shipped with a 'bliky' app which blinks the blue LED on the board.
+The board comes shipped with a 'bliky' app which blinks the blue LED on the board when first powered up. It is supplied with pin headers (unsoldered).
 
-There are two LEDs: one for power (red) and a user LED (blue). The blue LED is connected to PB9. Jumper BT0 (I believe) allows BOOT0 to be tied high. In theory this should be programable via the MCU's UART or USB but so far I have been unable to get this to work.  
+There are two LEDs: one for power (red) and a user LED (blue). The blue LED is connected to PB9. Jumper BT0 allows BOOT0 pin to be tied to Vdd. In theory this should put the MCU into bootloader mode which will allow it to be programmed via the MCU's UART or USB ports. However so far I have been unable to get this to work.  
 
 I think BT1 is for BOOT1, but not sure about this.  
 
