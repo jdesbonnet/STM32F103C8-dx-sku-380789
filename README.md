@@ -15,4 +15,13 @@ https://github.com/mkschreder/stm32f103c8t6_blink
 
 ## Board hardware
 
-There are two leds. One red for power and a blue user LED. This is connected to PB9. Jumper BT0 (I believe) allows BOOT0 to be tied high. I think BT1 is for BOOT1, but not sure about this.  The USB mini connector is only for power. The USB data line are not connected (although they are brought out to test pads on the underside of the board... so it should be possible to use some bodge wire to link up to the MCU's USB data pins).
+The board comes shipped with a 'bliky' app which blinks the blue LED on the board.
+
+There are two LEDs: one for power (red) and a user LED (blue). The blue LED is connected to PB9. Jumper BT0 (I believe) allows BOOT0 to be tied high. In theory this should be programable via the MCU's UART or USB but so far I have been unable to get this to work.  
+
+I think BT1 is for BOOT1, but not sure about this.  
+
+The USB mini connector is only for power. The USB data lines are not connected (although they are brought out to test pads on the underside of the board... so it should be possible to use some bodge wire to link up to the MCU's USB data pins).
+
+There is a SWD connector (Vdd, SWCLK, SWDIO, GND) which is what I'm currently focusing my efforts. I've been able to use gdb to stop and start the shipped Blinky app. I've also been able to download the firmware. But so far I have not been able to program the flash. I have no doubt this is my fault and not due to any defect of the product.
+
