@@ -28,6 +28,12 @@ Hardware features include:
 * 8MHz crystal
 * SWD connector (Vdd, SWCLK, SWDIO, GND) which is what I'm currently focusing my efforts. I've been able to use gdb to stop and start the shipped Blinky app. I've also been able to download the firmware. But so far I have not been able to program the flash. I have no doubt this is my fault and not due to any defect of the product.
 
+## MCU Documentation
+* STM32F103C8 product web page: http://www.st.com/web/en/catalog/mmc/FM141/SC1169/SS1031/LN1565/PF164476
+* STM32F103x8 STM32F103xB Datasheet: http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf
+* AN2606 STM32 microcontroller system memory boot mode: http://www.st.com/web/en/resource/technical/document/application_note/CD00167594.pdf
+* AN3155 USART protocol used in the STM32 bootloader: http://www.st.com/web/en/resource/technical/document/application_note/CD00264342.pdf
+* 
 ## Random notes (to be organized later)
 
 * USB Data - : PA11
