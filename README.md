@@ -3,7 +3,7 @@ This documents my efforts to use the STM32F103C8 development board on DealExtrem
 
 ![STM32F103C8 ARM Cortex-M3 dev board from DX.com ](https://raw.githubusercontent.com/jdesbonnet/STM32F103C8-dx-sku-380789/master/doc/STM32F103C8-DX-380789.jpg)
 
-Current status (7 May 2015): I can read the flash memory, but currently cannot program it. I can allow stop, step, restart the supplied blinky app with gdb.
+Current status (7 May 2015): I can read the flash memory, but currently cannot program it. I can also stop, step, restart the supplied blinky app with gdb.
 
 My setup is attempting to program and debug via the SWD connector. I'm using a STM32F4-Discovery board with the CN3 jumpers removed so that the SWD connector (CN2) can be used to program/debug other boards.
 
