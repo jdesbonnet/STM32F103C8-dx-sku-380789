@@ -33,7 +33,8 @@ Hardware features include:
 * STM32F103x8 STM32F103xB Datasheet: http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf
 * AN2606 STM32 microcontroller system memory boot mode: http://www.st.com/web/en/resource/technical/document/application_note/CD00167594.pdf
 * AN3155 USART protocol used in the STM32 bootloader: http://www.st.com/web/en/resource/technical/document/application_note/CD00264342.pdf
-* 
+* AN1356 USB DFU protocol used in the STM32 bootloader: http://www.st.com/st-web-ui/static/active/en/resource/technical/document/application_note/CD00264379.pdf
+
 ## Random notes (to be organized later)
 
 * USB Data - : PA11
