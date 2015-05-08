@@ -3,12 +3,15 @@ This documents my efforts to use the STM32F103C8 development board on DealExtrem
 
 ![STM32F103C8 ARM Cortex-M3 dev board from DX.com ](https://raw.githubusercontent.com/jdesbonnet/STM32F103C8-dx-sku-380789/master/doc/STM32F103C8-DX-380789.jpg)
 
-Current status (7 May 2015): I can read the flash memory, but currently cannot program it. I can also stop, step, restart the supplied blinky app with gdb.
+Current status (7 May 2015): Verified operation of SWD for stopping, stepping and resuming program operation. I can use stm32flash to download the contents of the flash and reupload it via the MCU USART1 (pins PA9, PA10). My next step is to upload a program of my own.
 
-My setup is attempting to program and debug via the SWD connector. I'm using a STM32F4-Discovery board with the CN3 jumpers removed so that the SWD connector (CN2) can be used to program/debug other boards.
+To program set BT0 jumpter to high, BT1 to low. You need a UART cable (eg FTDI cable). FTDI cable TX goes to MCU USART1RX (PA10) and cable RX to USART1TX (PA9). TODO: provide photos.
 
-I am using the following tools:
+To debug via the SWD connector. I'm using a STM32F4-Discovery board with the CN3 jumpers removed so that the SWD connector (CN2) can be used to program/debug other boards.
 
+I am using the following software tools:
+
+* stm32flash
 * https://github.com/texane/stlink
 * https://launchpad.net/gcc-arm-embedded/
 
