@@ -13,7 +13,7 @@ Two ways to upload a new program to flash:
 
 1. Use the bootloader. Set BOOT0 to high using BT0 jumper (move it to the postition closer to the RESET switch), BT1 to low. You need a UART cable (eg FTDI cable). FTDI cable TX goes to MCU USART1RX (PA10) and cable RX to USART1TX (PA9) and connect cable ground to board ground.  TODO: provide photos. Use stm32flash utility. [TODO: provide example]
 
-2. Use the Serial Wire Debug port. You'll need a SWD probe. I'm using a STM32F4-Discovery board with the CN3 jumpers removed so that the SWD connector (CN2) can be used to program/debug other boards. Use st-flash tool from stlink (https://github.com/texane/stlink) to uplaod/download.
+2. Use the Serial Wire Debug port. You'll need a SWD probe. I'm using a STM32F4-Discovery board with the CN3 jumpers removed so that the SWD connector (CN2) can be used to program/debug other boards. Use st-flash tool from stlink (https://github.com/texane/stlink) to upload/download.
 
 I am using the following software tools:
 
@@ -28,11 +28,11 @@ The board comes shipped with a 'blinky' app which blinks the blue LED on the boa
 Hardware features include:
 
 * Two LEDs: one for power (red) and a user LED (blue). The blue LED is connected to PB9. 
-* Jumper BT0 allows BOOT0 pin to be tied to Vdd. In theory this should put the MCU into bootloader mode which will allow it to be programmed via the MCU's UART or USB ports. However so far I have been unable to get this to work. I think BT1 is for BOOT1, but not sure about this.
+* Jumper BT0 allows BOOT0 pin to be tied to Vdd. This will put the MCU into bootloader mode after a power cycle or reset which will allow it to be programmed via the MCU's UART port. Only UART bootloader is available on the STM32F103C8.
 * Reset microswitch
-* USB mini connector for power. The USB data lines are not connected (although they are brought out to test pads on the underside of the board... so it should be possible to use some bodge wire to link up to the MCU's USB data pins). A Holtek HT7533-1 LDO provides 3.3V for the MCU. 
+* USB mini connector for power. The USB data lines are not connected (although they are brought out to test pads on the underside of the board, so it should be possible to use some wire to link to the MCU's USB data pins). A Holtek HT7533-1 LDO provides 3.3V for the MCU. 
 * 8MHz crystal
-* SWD connector (Vdd, SWCLK, SWDIO, GND) which is what I'm currently focusing my efforts. I've been able to use gdb to stop and start the shipped Blinky app. I've also been able to download the firmware. But so far I have not been able to program the flash. I have no doubt this is my fault and not due to any defect of the product.
+* SWD connector (Vdd, SWCLK, SWDIO, GND).
 
 ## MCU Documentation
 * STM32F103xx family web page: http://www.st.com/web/en/catalog/mmc/FM141/SC1169/SS1031/LN1565
