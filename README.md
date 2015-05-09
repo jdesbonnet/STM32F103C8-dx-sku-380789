@@ -11,17 +11,15 @@ Blinky now working!! Will update with source and make file shortly.
 
 Two ways to upload a new program to flash:
 
-1. Use the bootloader. Set BT0 jumpter to high (move it to the postition closer to the RESET switch), BT1 to low. You need a UART cable (eg FTDI cable). FTDI cable TX goes to MCU USART1RX (PA10) and cable RX to USART1TX (PA9) and connect cable ground to board ground.  TODO: provide photos. Use stm32flash utility. [TODO: provide example]
+1. Use the bootloader. Set BOOT0 to high using BT0 jumper (move it to the postition closer to the RESET switch), BT1 to low. You need a UART cable (eg FTDI cable). FTDI cable TX goes to MCU USART1RX (PA10) and cable RX to USART1TX (PA9) and connect cable ground to board ground.  TODO: provide photos. Use stm32flash utility. [TODO: provide example]
 
-2. Use the Serial Wire Debug port. You'll need a SWD probe. I'm using a STM32F4-Discovery board with the CN3 jumpers removed so that the SWD connector (CN2) can be used to program/debug other boards. Use st-flash tool from stlink to uplaod/download.
+2. Use the Serial Wire Debug port. You'll need a SWD probe. I'm using a STM32F4-Discovery board with the CN3 jumpers removed so that the SWD connector (CN2) can be used to program/debug other boards. Use st-flash tool from stlink (https://github.com/texane/stlink) to uplaod/download.
 
 I am using the following software tools:
 
-* stm32flash
+* https://code.google.com/p/stm32flash/
 * https://github.com/texane/stlink
 * https://launchpad.net/gcc-arm-embedded/
-
-
 
 ## Board hardware
 
