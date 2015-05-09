@@ -3,9 +3,7 @@ This documents my efforts to use the STM32F103C8 development board on DealExtrem
 
 ![STM32F103C8 ARM Cortex-M3 dev board from DX.com ](https://raw.githubusercontent.com/jdesbonnet/STM32F103C8-dx-sku-380789/master/doc/STM32F103C8-DX-380789.jpg)
 
-Current status (9 May 2015): Verified operation of Serial Wire Debug (SWD) port for reading, writing and debugging. I have also been able to activate the built-in bootloader by setting the BT0 (BOOT0) pin jumper. With the boot loader and stm32flash utility (using USART1 on pins PA9, PA10) I'be been able to download the 'blinky' program that came shipped with it and re-upload it. 
-
-Blinky now working!! See [blinky1](projects/blinky1) directory.
+Current status (9 May 2015): Verified operation of Serial Wire Debug (SWD) port for reading, writing and debugging. I have also been able to activate the built-in bootloader by setting the BT0 (BOOT0) pin jumper. With the boot loader and stm32flash utility (using USART1 on pins PA9, PA10). I have been able to compile, upload and debug a 'blinky' project. See [blinky1](projects/blinky1) directory.
 
 ## Programming MCU
 
