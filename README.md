@@ -5,8 +5,7 @@ This documents my efforts to use the STM32F103C8 development board on DealExtrem
 
 Current status (9 May 2015): Verified operation of Serial Wire Debug (SWD) port for reading, writing and debugging. I have also been able to activate the built-in bootloader by setting the BT0 (BOOT0) pin jumper. With the boot loader and stm32flash utility (using USART1 on pins PA9, PA10) I'be been able to download the 'blinky' program that came shipped with it and re-upload it. 
 
-However I have not been able to successfully execute anything yet: all my blinky examples upload but do not blink!
-I am using this as a starting point: https://github.com/mkschreder/stm32f103c8t6_blink
+Blinky now working!! Will update with source and make file shortly.
 
 ## Programming MCU
 
