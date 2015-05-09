@@ -1,5 +1,5 @@
 # STM32F103C8-dx-sku-380789
-This documents my efforts to use the STM32F103C8 development board on DealExtreme (dx.com) SKU 380789. Unfortunately this comes with absolutely no documention (although in fairness it shouldn't really be needed).
+This documents my efforts to use the STM32F103C8 development board on DealExtreme (dx.com) SKU 380789. 
 
 ![STM32F103C8 ARM Cortex-M3 dev board from DX.com ](https://raw.githubusercontent.com/jdesbonnet/STM32F103C8-dx-sku-380789/master/doc/STM32F103C8-DX-380789.jpg)
 
