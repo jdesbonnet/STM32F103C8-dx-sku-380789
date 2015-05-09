@@ -3,11 +3,18 @@ This documents my efforts to use the STM32F103C8 development board on DealExtrem
 
 ![STM32F103C8 ARM Cortex-M3 dev board from DX.com ](https://raw.githubusercontent.com/jdesbonnet/STM32F103C8-dx-sku-380789/master/doc/STM32F103C8-DX-380789.jpg)
 
-Current status (7 May 2015): Verified operation of SWD for stopping, stepping and resuming program operation. I can use stm32flash to download the contents of the flash and reupload it via the MCU USART1 (pins PA9, PA10). My next step is to upload a program of my own.
+Current status (9 May 2015): Verified operation of Serial Wire Debug (SWD) port for reading, writing and debugging. I have also been able to activate the built-in bootloader by setting the BT0 (BOOT0) pin jumper. With the boot loader and stm32flash utility (using USART1 on pins PA9, PA10) I'be been able to download the 'blinky' program that came shipped with it and re-upload it. 
 
-To program set BT0 jumpter to high, BT1 to low. You need a UART cable (eg FTDI cable). FTDI cable TX goes to MCU USART1RX (PA10) and cable RX to USART1TX (PA9). TODO: provide photos.
+However I have not been able to successfully execute anything yet: all my blinky examples upload but do not blink!
+I am using this as a starting point: https://github.com/mkschreder/stm32f103c8t6_blink
 
-To debug via the SWD connector. I'm using a STM32F4-Discovery board with the CN3 jumpers removed so that the SWD connector (CN2) can be used to program/debug other boards.
+## Programming MCU
+
+Two ways to upload a new program to flash:
+
+1. Use the bootloader. Set BT0 jumpter to high (move it to the postition closer to the RESET switch), BT1 to low. You need a UART cable (eg FTDI cable). FTDI cable TX goes to MCU USART1RX (PA10) and cable RX to USART1TX (PA9) and connect cable ground to board ground.  TODO: provide photos. Use stm32flash utility. [TODO: provide example]
+
+2. Use the Serial Wire Debug port. You'll need a SWD probe. I'm using a STM32F4-Discovery board with the CN3 jumpers removed so that the SWD connector (CN2) can be used to program/debug other boards. Use st-flash tool from stlink to uplaod/download.
 
 I am using the following software tools:
 
@@ -15,8 +22,7 @@ I am using the following software tools:
 * https://github.com/texane/stlink
 * https://launchpad.net/gcc-arm-embedded/
 
-I have built this project and am currently attempt to program the resulting .elf file:
-https://github.com/mkschreder/stm32f103c8t6_blink
+
 
 ## Board hardware
 
