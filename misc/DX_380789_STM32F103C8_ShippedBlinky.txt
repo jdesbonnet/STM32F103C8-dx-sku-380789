@@ -1,0 +1,25 @@
+This is a dump of the firmware shipped with the board. As far as I can tell
+it is just a simple 'blinky' that blinks the blue user LED.
+
+It was obtained by putting the MCU into bootloader mode and connecting a
+FTDI cable to the MCU's USART1 TX,RX on pins PA9, PA10 respectively. In my 
+case the cable was on /dev/ttyUSB2: replace with what ever device your
+serial cable is assigned to.
+
+The MCU bootloader mode is entered by setting BOOT0 high and BOOT1 low (see
+BT0, BT1 jumpers on board) and issuing a RESET.
+
+The following command was used to make the dump:
+
+stm32flash -r DX_380789_STM32F103C8_ShippedBlinky.bin /dev/ttyUSB2
+
+It can be restored using:
+
+stm32flash -w DX_380789_STM32F103C8_ShippedBlinky.bin /dev/ttyUSB2
+
+
+Notes: 
+1. The stm32flash utility seems to mistakingly identify this MCU as a
+128KiB flash. It is in fact 64KiB. But the restore still works.
+2. The binary file is compressed with gzip. Uncompress with gunzip.
+
