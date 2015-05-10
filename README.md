@@ -5,6 +5,9 @@ This documents my efforts to use the STM32F103C8 development board on DealExtrem
 
 Current status (9 May 2015): Verified operation of Serial Wire Debug (SWD) port for reading, writing and debugging. I have also been able to activate the built-in bootloader by setting the BT0 (BOOT0) pin jumper. With the boot loader and stm32flash utility (using USART1 on pins PA9, PA10). I have been able to compile, upload and debug a 'blinky' project. See [blinky1](projects/blinky1) directory.
 
+10 May 2015: More progress. Using Eclipse and ARM GCC plugin for Eclipse. Blinky was trivial! http://gnuarmeclipse.livius.net/blog/
+I'll upload code shortly.
+
 ## Programming MCU
 
 Two ways to upload a new program to flash:
