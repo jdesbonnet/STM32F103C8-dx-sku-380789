@@ -50,3 +50,8 @@ Hardware features include:
 * USART1_TX : PA9
 * USART1_RX : PA10
 
+## STM32 and GCC
+
+* http://www.ba0sh1.com/opensource-stm32-development/
+* http://www.ba0sh1.com/stm32cubemx-gcc-makefile/
+
