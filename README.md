@@ -3,7 +3,7 @@ This documents my efforts to use the STM32F103C8 development board on DealExtrem
 
 ![STM32F103C8 ARM Cortex-M3 dev board from DX.com ](https://raw.githubusercontent.com/jdesbonnet/STM32F103C8-dx-sku-380789/master/doc/STM32F103C8-DX-380789.jpg)
 
-Current statis (10 May 2015): Most tool chain issues have been resolved. I can write code using Eclipse C/C++ IDE together with GNU ARM Eclipse Plug-ins and OpenOCD. Writing a Blinky was trivial! See [blinky2](projects/blinky2) 
+Current status (10 May 2015): Most tool chain issues have been resolved. I can write code using Eclipse C/C++ IDE together with GNU ARM Eclipse Plug-ins and OpenOCD. Writing a Blinky was trivial! See [blinky2](projects/blinky2) 
 I can program and debug through the Eclipse IDE with OpenOCD and a STLink-V2 probe from a STM32F4-Discovery board. The main difficulty was getting the right configuration for the OpenOCD debugger ("-f interface/stlink-v2.cfg  -f target/stm32f1x_stlink.cfg")
 
 Info on Eclipse ARM GCC plugin: http://gnuarmeclipse.livius.net/blog/ 
