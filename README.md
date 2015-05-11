@@ -55,5 +55,5 @@ Hardware features include:
 * http://www.ba0sh1.com/opensource-stm32-development/
 * http://www.ba0sh1.com/stm32cubemx-gcc-makefile/
 * https://github.com/baoshi/CubeMX2Makefile
-* 
+* http://wunderkis.de/stm32cube/index.html
 
