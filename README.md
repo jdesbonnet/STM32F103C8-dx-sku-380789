@@ -56,4 +56,5 @@ Hardware features include:
 * http://www.ba0sh1.com/stm32cubemx-gcc-makefile/
 * https://github.com/baoshi/CubeMX2Makefile
 * http://wunderkis.de/stm32cube/index.html
+* http://pandafruits.com/stm32_primer/stm32_primer_uart.php : I found this example useful for getting a simple UART example working (Eclipse C/C++ with GNU ARM Eclipes plugin and STM32F10x perhipheral lib v3.5.0)
 
